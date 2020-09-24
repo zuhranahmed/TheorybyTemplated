@@ -1,0 +1,380 @@
+// General Styling
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media screen and (max-width: 500px) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  background-color: #eee;
+  color: #333;
+
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  ul {
+    list-style: none;
+  }
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  // Buttons
+  .btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #70a1ff;
+    color: #fff;
+  }
+
+  // Navbar Styling
+  .header {
+    height: 60vh;
+    background-image: url(../img/hero-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+    color: #eee;
+    padding: 0 2.5rem;
+
+    @media screen and (max-width: 800px) {
+      background-attachment: scroll;
+    }
+
+    @media screen and (max-width: 500px) {
+      height: 80vh;
+      background-attachment: scroll;
+    }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 0;
+
+      @media screen and (max-width: 500px) {
+        padding: 2.5rem 0;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+      }
+
+      // padding-top: 05rem;
+
+      &--logo {
+        font-size: 1.8rem;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+
+        @media screen and (max-width: 500px) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &--items {
+        display: flex;
+
+        a {
+          color: #eee;
+          font-size: 1.8rem;
+          transition: all 0.2s;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+
+      &--item1,
+      &--item2 {
+        margin-right: 3.5rem;
+      }
+    }
+
+    // Header Heading Styling
+
+    &__heading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 100%;
+      text-align: center;
+
+      &--h1 {
+        font-size: 6.5rem;
+        font-weight: 300;
+
+        @media screen and (max-width: 800px) {
+          font-size: 5rem;
+        }
+
+        @media screen and (max-width: 500px) {
+          font-size: 4rem;
+        }
+      }
+    }
+  }
+
+  // Blogs Section Styling
+  .blogs {
+    padding: 0 2.5rem;
+    &__items {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10rem 0;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+
+      @media screen and (max-width: 800px) {
+        padding: 7.5rem;
+        grid-template-columns: 1fr;
+      }
+
+      @media screen and (max-width: 500px) {
+        padding: 5rem 0;
+
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__item {
+      width: 80%;
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        margin: 0 auto;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      &--heading {
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: #70a1ff;
+      }
+      &--details {
+        margin-bottom: 2rem;
+        color: #a4b0be;
+      }
+    }
+  }
+
+  //section Team Styling
+
+  .team {
+    background-color: #70a1ff;
+    color: #eee;
+    padding: 0 2.5rem;
+
+    &__content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10rem 0;
+
+      @media screen and (max-width: 800px) {
+        padding: 7.5rem 0;
+      }
+
+      @media screen and (max-width: 500px) {
+        padding: 5rem 0;
+      }
+
+      &--heading {
+        font-size: 3.8rem;
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 5rem;
+      }
+    }
+
+    &__member {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+
+      @media screen and (max-width: 800px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+      }
+
+      &--person {
+        padding: 5rem 2.5rem;
+        text-align: center;
+        border: 1px solid rgba(#eee, 0.4);
+
+        @media screen and (max-width: 500px) {
+          padding: 3.5rem 2rem;
+        }
+      }
+
+      &--img {
+        border-radius: 50%;
+        width: 75%;
+        display: inline-block;
+        object-fit: cover;
+        margin-bottom: 1.5rem;
+
+        @media screen and (max-width: 500px) {
+          width: 50%;
+        }
+      }
+
+      &--name {
+        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        font-weight: 300;
+      }
+      &--details {
+        font-weight: 300;
+      }
+    }
+  }
+
+  // Story Section Styling
+  .story {
+    padding: 0 2.5rem;
+    &__content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10rem 0;
+
+      border-bottom: 1px solid rgba(#333, 0.3);
+
+      @media screen and (max-width: 800px) {
+        padding: 7.5rem 0;
+      }
+
+      @media screen and (max-width: 500px) {
+        padding: 5rem 0;
+      }
+
+      &--heading {
+        font-size: 3.8rem;
+        text-align: center;
+        font-weight: 300;
+        margin-bottom: 5rem;
+        color: #70a1ff;
+      }
+    }
+
+    &__posts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+
+      @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &__post {
+      &--img {
+        margin-bottom: 1.5rem;
+      }
+
+      &--heading {
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+        font-weight: 300;
+        color: #70a1ff;
+      }
+
+      &--details {
+        margin-bottom: 2rem;
+        color: #a4b0be;
+      }
+    }
+  }
+
+  // Footer Styling
+
+  .footer {
+    padding: 0 2.5rem;
+    &__content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 5rem 0;
+
+      color: #a4b0be;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @media screen and (max-width: 800px) {
+        padding: 3.5rem 0;
+        flex-direction: column;
+      }
+
+      @media screen and (max-width: 500px) {
+        padding: 2.5rem 0;
+        flex-direction: column;
+      }
+    }
+
+    &__copyright {
+      &--link {
+        color: #70a1ff;
+        border-bottom: #70a1ff 1px dotted;
+      }
+
+      @media screen and (max-width: 800px) {
+        margin-bottom: 1.5rem;
+      }
+
+      @media screen and (max-width: 500px) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    &__author {
+      .fa-twitter {
+        margin-right: 0.5rem;
+        color: #70a1ff;
+      }
+    }
+  }
+}
